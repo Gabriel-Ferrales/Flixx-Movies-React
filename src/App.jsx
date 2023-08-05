@@ -6,13 +6,14 @@ import Details, {loader as detailsLoader} from "./pages/Details"
 import Search, {loader as searchLoader} from "./pages/Search"
 import Shows, {loader as showsLoader} from "./pages/Shows"
 import ShowDetails, {loader as showDetailsLoader} from "./pages/ShowDetails"
+import Error from "./pages/Error"
 
 // Fontawesome imports
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTwitter, faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faMagnifyingGlass, faStar } from "@fortawesome/free-solid-svg-icons"
 // adding to library icons globally
-library.add(faTwitter, faFacebook, faGithub, faLinkedin, faMagnifyingGlass)
+library.add(faTwitter, faFacebook, faGithub, faLinkedin, faMagnifyingGlass, faStar)
 
 import {
     RouterProvider,
@@ -23,7 +24,7 @@ import {
 } from "react-router-dom"
 
 const router = createBrowserRouter(createRoutesFromElements(
-    <Route path="/" element={<Layout />} >
+    <Route path="/" element={<Layout />} errorElement={<Error/>}>
       <Route index element={<Home />} loader={popularMoviesLoader} />
       <Route path="details/:id" element={<Details />}  loader={detailsLoader}/>
       <Route path="/search" element={<Search />} loader={searchLoader} />

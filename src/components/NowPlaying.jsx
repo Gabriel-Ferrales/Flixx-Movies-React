@@ -3,6 +3,7 @@ import { getNowPlayingMovies } from "../api"
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import "swiper/css"
 import 'swiper/css/autoplay'
@@ -33,7 +34,7 @@ export default function NowPlaying(){
                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}` || "src/assets/no-image.jpg"} alt={movie.title} />
                 </Link>
                 <h4 className="swiper-rating">
-                    <i className="fas fa-star text-secondary"></i> {movie.vote_average} / 10
+                <FontAwesomeIcon icon="fa-solid fa-star" style={{color: "#f1c40f"}} /> {movie.vote_average} / 10
                 </h4>
             </SwiperSlide>           
         )

@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+
 export default function ShowCardDetails({
     image, 
     title, 
@@ -39,7 +42,7 @@ export default function ShowCardDetails({
                     <div>
                     <h2>{title}</h2>
                     <p>
-                        <i className="fas fa-star text-primary" />{rating} / 10
+                        <FontAwesomeIcon icon="fa-solid fa-star" style={{color: "#f1c40f"}} />{rating} / 10
                     </p>
                     <p className="text-muted">Release Date: {release}</p>
                     <p>

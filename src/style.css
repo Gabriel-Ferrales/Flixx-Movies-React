@@ -124,6 +124,7 @@ ul {
 .card {
   background: #04376b;
   padding: 5px;
+  max-width: 400px;
 }
 
 .card img {
@@ -347,3 +348,4 @@ section h2 {
 .alert-error {
   background: red;
 }
+
