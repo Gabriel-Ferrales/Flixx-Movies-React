@@ -18,7 +18,7 @@ export default function Search(){
     let [searchParams, setSearchParams] = useSearchParams()
     const type = searchParams.get("type")
     const searchTerm = searchParams.get("search-term")
-    console.log(searcdasdh)
+
     
     
     const currentPage = searchData.page
