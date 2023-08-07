@@ -6,6 +6,8 @@ import {
 import SearchForm from "../components/SearchForm";
 import { getPopularMovies } from "../api";
 
+
+
 export function loader(){
     return getPopularMovies()
 }
